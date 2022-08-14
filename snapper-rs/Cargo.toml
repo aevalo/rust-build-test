@@ -1,0 +1,10 @@
+[package]
+name = "snapper-cli"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libsnapper = { version = "0.1.0", path = "../libsnapper"  }
+
+#[patch.crates-io]
+#libsnapper = { version = "0.1.0", path = "../libsnapper" }

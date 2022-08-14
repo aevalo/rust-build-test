@@ -1,0 +1,15 @@
+[package]
+name = "add_one"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["rlib"]
+
+[dependencies]
+libadder = { version = "0.1.0", path = "../libadder" }
+shaku = "0.6.1"
+
+#[patch.crates-io]
+#libadder = { version = "0.1.0", path = "../libadder" }
+

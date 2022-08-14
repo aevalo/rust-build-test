@@ -1,0 +1,11 @@
+[workspace]
+
+members = [
+  "libsnapper",
+  "snapper-rs",
+  "libadder",
+  "adder",
+  "add_one",
+  "add_two",
+  "logger"
+]

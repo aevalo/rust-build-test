@@ -1,0 +1,18 @@
+[package]
+name = "adder"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = []
+add_one = ["dep:add_one"]
+add_two = ["dep:add_two"]
+
+[dependencies]
+add_one = { version = "0.1.0", path = "../add_one", optional = true }
+add_two = { version = "0.1.0", path = "../add_two", optional = true }
+logger = { version = "0.1.0", path = "../logger" }
+shaku = "0.6.1"
+
+#[patch.crates-io]
+#add_one = { version = "0.1.0", path = "../add_one" }
