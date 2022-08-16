@@ -1,26 +1,24 @@
 use shaku::{Component, module};
 
-use libadder::Adder;
-
-pub fn add_two(x: i32) -> i32 {
-  x + 2
-}
-
 #[derive(Component)]
-#[shaku(interface = Adder)]
-pub struct AdderImpl;
+#[shaku(interface = super::AddTwo)]
+pub struct AddTwoImpl;
 
-impl Adder for AdderImpl {
+impl super::AddTwo for AddTwoImpl {
   fn add(&self, x: i32) -> i32 {
     add_two(x)
   }
 }
 
 module! {
-  pub AddTwoModule {
-    components = [AdderImpl],
+  pub AddTwoModuleImpl: super::AddTwoModule {
+    components = [AddTwoImpl],
     providers = []
   }
+}
+
+fn add_two(x: i32) -> i32 {
+  x + 2
 }
 
 #[cfg(test)]

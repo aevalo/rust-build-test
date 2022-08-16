@@ -3,27 +3,10 @@
 version = 3
 
 [[package]]
-name = "add_one"
-version = "0.1.0"
-dependencies = [
- "libadder",
- "shaku",
-]
-
-[[package]]
-name = "add_two"
-version = "0.1.0"
-dependencies = [
- "libadder",
- "shaku",
-]
-
-[[package]]
 name = "adder"
 version = "0.1.0"
 dependencies = [
- "add_one",
- "add_two",
+ "libadder",
  "logger",
  "shaku",
 ]
@@ -33,6 +16,14 @@ name = "anymap"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "33954243bd79057c2de7338850b85983a44588021f8a5fee574a8888c6de4344"
+
+[[package]]
+name = "custom_adder"
+version = "0.1.0"
+dependencies = [
+ "libadder",
+ "shaku",
+]
 
 [[package]]
 name = "libadder"
